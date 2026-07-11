@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Sudanese Youth Hub connects and empowers Sudanese youth through arts, peace, music, technology, workshops, and community initiatives."
+    >
+
+    <title>Sudanese Youth Hub | Home</title>
+
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-decoration decoration-one"></div>
+            <div class="hero-decoration decoration-two"></div>
+
+            <div class="hero-content reveal">
+                <p class="section-label">Community • Creativity • Connection</p>
+
+                <h1>
+                    Welcome to the
+                    <span>Sudanese Youth Hub</span>
+                </h1>
+
+                <p class="hero-description">
+                    We are a community of young Sudanese individuals who are
+                    passionate about making a positive impact in society.
+                    Through collaboration, creativity and innovation, we
+                    empower young people to shape a better future.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="/about" class="btn btn-primary">
+                        Learn More
+                    </a>
+
+                    <a href="/events" class="btn btn-outline">
+                        Explore Events
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image reveal">
+                <div class="image-frame">
+                    <img
+                        src="/images/syh.png"
+                        alt="Sudanese Youth Hub community"
+                    >
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Main Information Grid -->
+        <section class="content-section">
+
+            <div class="section-heading reveal">
+                <p class="section-label">Discover Our Community</p>
+                <h2>What's happening at the hub?</h2>
+                <p>
+                    Explore our latest news, upcoming events and ways to
+                    connect with the Sudanese Youth Hub.
+                </p>
+            </div>
+
+            <div class="content-grid">
+
+                <!-- Latest News -->
+                <article class="info-card news-card reveal">
+                    <div class="card-icon">📰</div>
+
+                    <h2>Latest News</h2>
+
+                    <ul class="link-list">
+                        <li>
+                            <a href="#">
+                                <span>SYH launches a new community project</span>
+                                <span class="arrow">→</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span>Registration opens for our youth workshop</span>
+                                <span class="arrow">→</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span>SYH partners with local organisations</span>
+                                <span class="arrow">→</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a href="/projects" class="text-link">
+                        View our projects →
+                    </a>
+                </article>
+
+
+                <!-- Upcoming Events -->
+                <article class="info-card events-card reveal">
+                    <div class="card-icon">📅</div>
+
+                    <h2>Upcoming Events</h2>
+
+                    <ul class="event-list">
+
+                        <li class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">15</span>
+                                <span class="event-month">AUG</span>
+                            </div>
+
+                            <div class="event-details">
+                                <h3>Youth Leadership Workshop</h3>
+                                <p>Leadership, teamwork and community action.</p>
+                            </div>
+                        </li>
+
+                        <li class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">05</span>
+                                <span class="event-month">SEP</span>
+                            </div>
+
+                            <div class="event-details">
+                                <h3>Community Creative Day</h3>
+                                <p>Art, music and youth-led activities.</p>
+                            </div>
+                        </li>
+
+                        <li class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">10</span>
+                                <span class="event-month">OCT</span>
+                            </div>
+
+                            <div class="event-details">
+                                <h3>Technology Bootcamp</h3>
+                                <p>Digital skills and creative technology.</p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <a href="/events" class="text-link">
+                        View all events →
+                    </a>
+                </article>
+
+
+                <!-- Contact -->
+                <article class="info-card contact-card reveal">
+                    <div class="card-icon">💬</div>
+
+                    <h2>Contact Us</h2>
+
+                    <p>
+                        Have a question, partnership idea or suggestion?
+                        We would love to hear from you.
+                    </p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <strong>Email</strong>
+                            <a href="mailto:info@sudaneseyouthhub.org">
+                                info@sudaneseyouthhub.org
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Phone</strong>
+                            <span>+256 000 000 000</span>
+                        </li>
+
+                        <li>
+                            <strong>Location</strong>
+                            <span>Kampala, Uganda</span>
+                        </li>
+                    </ul>
+
+                    <a href="/contact" class="btn btn-primary">
+                        Contact Us
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <%- include("partials/footer") %>
+
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

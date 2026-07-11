@@ -1,0 +1,103 @@
+
+/* .geist-pixel-<uniquifier> {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELSH" 0;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Yuyu", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+
+}
+
+
+nav{
+    display:flex;
+    flex-direction: column;
+}
+.nav_upper{
+    background-color: #ffcd00;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+form{
+    display:flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 20px;
+    gap:  0.5rem;
+    
+    /* border: 1px  #000000; */
+    /* border-radius: px; */
+}
+input{
+    border-radius: 10px;
+    border-color: #000000;
+    background-color: #ffffff;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+    
+}
+
+button{
+    border-radius: 10px;
+    border-color: #000000;
+    background-color: #10e0ff;
+}
+.logo{ 
+    height: 100px;
+    width: 100px;
+
+}
+.nav_lower{
+    background-color: #10e0ff;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    justify-content: space-around;
+    height: 60px;
+    align-items: center;
+     
+}
+
+.nav_lower ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+.nav_lower ul li{
+    text-align: center;
+}
+.nav_lower ul li a{
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border-radius: 100px;
+}
+li:hover{
+    background-color: #ffcd00;
+    color: #000000;
+    
+}
