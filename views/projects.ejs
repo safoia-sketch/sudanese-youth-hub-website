@@ -10,21 +10,21 @@
 
     <meta
         name="description"
-        content="Sudanese Youth Hub connects and empowers Sudanese youth through arts, peace, music, technology, workshops, and community initiatives."
+        content="Explore the projects and community initiatives of Sudanese Youth Hub."
     >
 
     <title>Sudanese Youth Hub | Projects</title>
 
     <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projects.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
-    >
+    > -->
 </head>
 
 <body>
@@ -32,12 +32,119 @@
     <%- include("partials/navbar") %>
 
     <main>
-       
-    
+
+        <!-- Projects Hero -->
+        <section class="projects-hero reveal">
+            <p class="section-label">Our Work</p>
+
+            <h1>
+                Projects That Create
+                <span>Positive Change</span>
+            </h1>
+
+            <p>
+                Explore the initiatives created by Sudanese Youth Hub to
+                empower young people, encourage creativity and strengthen
+                communities.
+            </p>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="cards">
+
+            <article class="card reveal">
+                <img
+                    src="/images/project1.jpeg"
+                    alt="Young artists participating in a peace project"
+                >
+
+                <div class="card-content">
+                    <p class="project-number">Project 01</p>
+                    <h2>Youth and Art for Peace</h2>
+
+                    <p class="project-description">
+                        A platform for young artists to express their views
+                        about peace, identity and conflict resolution through
+                        creative work.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card reveal">
+                <img
+                    src="/images/project2.jpeg"
+                    alt="Young people participating in indoor community activities"
+                >
+
+                <div class="card-content">
+                    <p class="project-number">Project 02</p>
+                    <h2>In-House Activities</h2>
+
+                    <p class="project-description">
+                        Activities organized at our community space where
+                        young people can meet, connect, exchange ideas and
+                        build stronger relationships.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card reveal">
+                <img
+                    src="/images/project3.jpeg"
+                    alt="Sudanese Youth Hub community outreach activity"
+                >
+
+                <div class="card-content">
+                    <p class="project-number">Project 03</p>
+                    <h2>Community Outreach Program</h2>
+
+                    <p class="project-description">
+                        A program that extends our support to underserved
+                        communities by providing resources, activities and
+                        opportunities for participation.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card reveal">
+                <img
+                    src="/images/project4.jpeg"
+                    alt="Youth empowerment training session"
+                >
+
+                <div class="card-content">
+                    <p class="project-number">Project 04</p>
+                    <h2>Youth Empowerment Initiative</h2>
+
+                    <p class="project-description">
+                        Skills training, mentorship and leadership
+                        opportunities that prepare young people to make a
+                        meaningful contribution to their communities.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter reveal">
+            <h2>Stay Connected</h2>
+
+            <p>
+                Stay updated with our latest projects, events and community
+                initiatives by subscribing to our newsletter.
+            </p>
+
+            <a href="/contact" class="btn">
+                Subscribe Now
+            </a>
+        </section>
+
     </main>
-    
+
     <%- include("partials/footer") %>
 
-            
-    
+    <script src="/js/main.js"></script>
+
+</body>
 </html>
