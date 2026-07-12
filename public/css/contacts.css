@@ -1,0 +1,441 @@
+/* =========================
+   Contact Page Variables
+========================= */
+
+:root {
+    --primary-cyan: #10e0ff;
+    --primary-blue: #0086eb;
+    --deep-blue: #006ee9;
+    --yellow: #ffcd00;
+    --light-yellow: #ffef00;
+
+    --white: #ffffff;
+    --page-background: #f7fbff;
+    --dark-text: #14213d;
+    --body-text: #536176;
+    --border-color: #dfeaf4;
+
+    --small-shadow: 0 12px 30px rgba(0, 110, 233, 0.08);
+    --large-shadow: 0 24px 60px rgba(0, 110, 233, 0.16);
+
+    --small-radius: 15px;
+    --medium-radius: 25px;
+    --large-radius: 38px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================
+   Page Layout
+========================= */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 28px;
+    width: min(1250px, 90%);
+    margin: 0 auto;
+    padding: 90px 0 110px;
+}
+
+.contact-container,
+.newsletter-container,
+.address-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: var(--large-radius);
+    background-color: var(--white);
+    box-shadow: var(--small-shadow);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.contact-container:hover,
+.newsletter-container:hover,
+.address-container:hover {
+    border-color: rgba(0, 134, 235, 0.28);
+    box-shadow: var(--large-shadow);
+    transform: translateY(-6px);
+}
+
+.contact-container {
+    grid-column: span 7;
+    padding: 45px;
+}
+
+.newsletter-container {
+    grid-column: span 5;
+    padding: 45px;
+}
+
+.address-container {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 50px;
+    padding: 45px;
+}
+
+
+/* =========================
+   Decorative Top Lines
+========================= */
+
+.contact-container::before,
+.newsletter-container::before,
+.address-container::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    content: "";
+}
+
+.contact-container::before {
+    background: linear-gradient(
+        90deg,
+        var(--primary-blue),
+        var(--primary-cyan)
+    );
+}
+
+.newsletter-container::before {
+    background: linear-gradient(
+        90deg,
+        var(--yellow),
+        var(--light-yellow)
+    );
+}
+
+.address-container::before {
+    background: linear-gradient(
+        90deg,
+        var(--deep-blue),
+        var(--primary-cyan),
+        var(--yellow)
+    );
+}
+
+
+/* =========================
+   Typography
+========================= */
+
+.contact-container h1,
+.newsletter-container h2,
+.address-container h2,
+.address-container h1 {
+    color: var(--dark-text);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+}
+
+.contact-container h1 {
+    margin-bottom: 14px;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.newsletter-container h2,
+.address-container h2 {
+    margin-bottom: 14px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.address-container h1 {
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+}
+
+.contact-container > p,
+.newsletter-container > p,
+.address-container > p {
+    color: var(--body-text);
+    line-height: 1.8;
+}
+
+.contact-container > p,
+.newsletter-container > p {
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   Forms
+========================= */
+
+.contact-form,
+.newsletter-form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form label,
+.newsletter-form label {
+    color: var(--dark-text);
+    font-size: 0.92rem;
+    font-weight: 800;
+}
+
+.contact-form input,
+.contact-form textarea,
+.newsletter-form input {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: var(--small-radius);
+    background-color: #fbfdff;
+    color: var(--dark-text);
+    font-family: inherit;
+    font-size: 1rem;
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition);
+}
+
+.contact-form input,
+.newsletter-form input {
+    min-height: 50px;
+    padding: 0 16px;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    padding: 15px 16px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px rgba(0, 134, 235, 0.12);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.newsletter-form input::placeholder {
+    color: #8b98a9;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.contact-form button,
+.newsletter-form button {
+    min-height: 50px;
+    margin-top: 10px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 999px;
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.contact-form button {
+    background: linear-gradient(
+        135deg,
+        var(--primary-blue),
+        var(--deep-blue)
+    );
+    box-shadow: 0 12px 28px rgba(0, 110, 233, 0.24);
+}
+
+.newsletter-form button {
+    background: linear-gradient(
+        135deg,
+        var(--yellow),
+        var(--light-yellow)
+    );
+    color: var(--dark-text);
+    box-shadow: 0 12px 28px rgba(255, 205, 0, 0.25);
+}
+
+.contact-form button:hover,
+.newsletter-form button:hover {
+    transform: translateY(-3px);
+}
+
+.contact-form button:hover {
+    box-shadow: 0 18px 34px rgba(0, 110, 233, 0.34);
+}
+
+.newsletter-form button:hover {
+    box-shadow: 0 18px 34px rgba(255, 205, 0, 0.34);
+}
+
+.contact-form button:active,
+.newsletter-form button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   Newsletter Section
+========================= */
+
+.newsletter-container {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255, 205, 0, 0.2),
+            transparent 34%
+        ),
+        var(--white);
+}
+
+.newsletter-form br {
+    display: none;
+}
+
+
+/* =========================
+   Address Section
+========================= */
+
+.address-container {
+    background:
+        radial-gradient(
+            circle at right top,
+            rgba(16, 224, 255, 0.14),
+            transparent 32%
+        ),
+        var(--white);
+}
+
+.address-container > p {
+    padding: 22px;
+    border-left: 5px solid var(--yellow);
+    border-radius:
+        0
+        var(--small-radius)
+        var(--small-radius)
+        0;
+    background-color: #fbfdff;
+}
+
+.address-container > p a {
+    color: var(--deep-blue);
+    font-weight: 800;
+}
+
+.address-container > p a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   Social Media Links
+========================= */
+
+.social-media-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-media-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 19px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background-color: var(--white);
+    color: var(--deep-blue);
+    font-weight: 800;
+    box-shadow: 0 8px 18px rgba(0, 110, 233, 0.06);
+    transition:
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.social-media-links a:hover {
+    border-color: var(--primary-blue);
+    background-color: var(--primary-blue);
+    color: var(--white);
+    box-shadow: 0 12px 24px rgba(0, 110, 233, 0.24);
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 950px) {
+    .contact-container,
+    .newsletter-container {
+        grid-column: span 12;
+    }
+
+    .address-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    main {
+        width: min(92%, 1250px);
+        gap: 20px;
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .contact-container,
+    .newsletter-container,
+    .address-container {
+        padding: 30px 24px;
+        border-radius: 26px;
+    }
+
+    .contact-container h1 {
+        font-size: 2.3rem;
+    }
+
+    .social-media-links {
+        flex-direction: column;
+    }
+
+    .social-media-links a {
+        width: 100%;
+    }
+
+    .contact-form button,
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

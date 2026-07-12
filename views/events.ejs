@@ -16,15 +16,15 @@
     <title>Sudanese Youth Hub | Events</title>
 
     <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/events.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
-    >
+    > -->
 </head>
 
 <body>
@@ -32,12 +32,65 @@
     <%- include("partials/navbar") %>
 
     <main>
-       
-    
+        <section class="events-hero reveal">
+            <p class="section-label">Upcoming Events</p>
+
+            <h1>
+                Join Us in Our
+                <span>Community Initiatives</span>
+            </h1>
+            <p>date: October 15, 2026</p>
+            <p>place: Kampala, Uganda</p>
+
+            <p>
+                Stay updated with the latest events and activities organized
+                by Sudanese Youth Hub. Participate, engage, and make a
+                difference in your community.
+            </p>
+
+            <img
+                src="/images/events-hero.jpg"
+                alt="Sudanese Youth Hub community event"
+            >
+
+        </section>
+
+        <section class="events-list">
+            <h2>Upcoming Events</h2>
+
+            <div class="event-card reveal">
+                <h3>Community Art Workshop</h3>
+                <p>Date: October 15, 2026</p>
+                <p>Location: Kampala, Uganda</p>
+                <p>
+                    Join us for a creative workshop where young artists will
+                    collaborate on community art projects that promote peace
+                    and unity.
+                </p>
+            </div>
+        </section>
+        <section class="events-list">
+            <h2>Past Events</h2>
+
+            <div class="event-card reveal">
+                <h3>Youth Empowerment Seminar</h3>
+                <p>Date: September 10, 2026</p>
+                <p>Location: Nairobi, Kenya</p>
+                <p>
+                    A seminar focused on empowering young individuals with
+                    skills and knowledge to lead positive change in their
+                    communities.
+                </p>
+            </div>
+        </section>
+        <p>for more information, please contact us:</p>
+        <a href="/contact" class="btn btn-primary">
+            Contact Us
+        </a>
     </main>
     
     <%- include("partials/footer") %>
-
+    <script src="/js/main.js"></script>
             
-    
+</body>   
 </html>
