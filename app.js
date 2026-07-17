@@ -2,6 +2,8 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import newsletterRoutes from "./routes/newsletterRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
 const app = express();
 const port = 3000;
 
@@ -42,9 +44,20 @@ app.get("/gallery", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-    res.render("contact");
-});
+    res.render("contact", {
+        successMessage: null,
+        errorMessage: null,
+        errors: [],
+        formData: {},
 
+        newsletterSuccessMessage: null,
+        newsletterErrorMessage: null,
+        newsletterErrors: [],
+        newsletterFormData: {}
+    });
+});
+app.use("/subscribe", newsletterRoutes);
+app.use("/contact", contactRoutes);
 // Start server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
